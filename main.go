@@ -10,7 +10,6 @@ import (
 	"os"
 	"strings"
 
-	"github.com/davecgh/go-spew/spew"
 	"github.com/joho/godotenv"
 )
 
@@ -55,14 +54,35 @@ func apiRequest(name string) {
 		log.Fatal(err)
 		return
 	}
-	spew.Dump(string(bytes))
+
+	// query, err := gojq.Parse(".[] | {code: .code}")
+	// if err != nil {
+	// 	log.Fatal(err)
+	// 	return
+	// }
+	//
+	// iter := query.Run(bytes)
+	// for {
+	// 	v, ok := iter.Next()
+	// 	if !ok {
+	// 		break
+	// 	}
+	// 	if err, ok := v.(error); ok {
+	// 		log.Fatal(err)
+	// 		return
+	// 	}
+	// 	fmt.Printf("code: %v\n", v)
+	// }
 
 	if err := json.Unmarshal(bytes, &eb); err != nil {
 		log.Fatal(err)
 		return
 	}
 
-	spew.Dump(eb)
+	for _, e := range eb {
+		fmt.Printf("code: %v\n", e.Code)
+		fmt.Printf("character: %v\n\n", e.Character)
+	}
 }
 
 func main() {
