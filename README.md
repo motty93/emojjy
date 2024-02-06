@@ -4,6 +4,8 @@
 
 https://api-ninjas.com/api/emoji
 
+環境変数の設定はenv_sampleを見てね。設定したら.envにrenameしてください。
+
 ```bash
 $ go install
 
