@@ -1,5 +1,5 @@
 # emojjy
-https://github.com/motty93/emojjy/issues/1
+<img src="https://github.com/motty93/emojjy/issues/1" width="400">
 
 ## Get Start
 こちらでAPI Keyを取得しましょう。
