@@ -55,6 +55,7 @@ func apiRequest(name string) {
 		return
 	}
 
+	// NOTE: なんかうまく行かなかった
 	// query, err := gojq.Parse(".[] | {code: .code}")
 	// if err != nil {
 	// 	log.Fatal(err)
