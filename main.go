@@ -67,7 +67,7 @@ func apiRequest(name string) {
 
 func main() {
 	ch := make(chan string)
-	fmt.Println("Enter emoji name:")
+	fmt.Println("Enter emoji name: ")
 
 	go func(ch chan string) {
 		reader := bufio.NewReader(os.Stdin)
@@ -77,14 +77,23 @@ func main() {
 				log.Fatal(err)
 				continue
 			}
-			ch <- strings.TrimSpace(name)
+
+			name = strings.TrimSpace(name)
+			switch name {
+			case "exit":
+				os.Exit(0)
+			case "":
+				fmt.Print("Enter emoji name: ")
+			default:
+				ch <- name
+			}
 		}
 	}(ch)
 
 	for {
 		go func(input string) {
 			apiRequest(input)
-			fmt.Print("Enter emoji name:")
+			fmt.Print("Enter emoji name: ")
 		}(<-ch)
 	}
 }
