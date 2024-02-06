@@ -17,3 +17,10 @@ $ go run main.go
 
 ### 終了方法
 `Enter emoji name: `に対して `exit`と入力するか `ctrl-c`でプログラムを終了させてください。
+
+## Build
+```bash
+$ go build -o bin/main main.go
+
+$ ./bin/main
+```
