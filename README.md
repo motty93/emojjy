@@ -1,4 +1,4 @@
-# open-emoji-api
+# emojjy
 ## Get Start
 こちらでAPI Keyを取得しましょう。
 
