@@ -1,4 +1,6 @@
 # emojjy
+https://github.com/motty93/emojjy/issues/1
+
 ## Get Start
 こちらでAPI Keyを取得しましょう。
 
