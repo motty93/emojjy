@@ -61,8 +61,7 @@ func apiRequest(name string) {
 	}
 
 	for _, e := range eb {
-		fmt.Printf("code: %v\n", e.Code)
-		fmt.Printf("character: %v\n\n", e.Character)
+		fmt.Printf("%v%2s%v\n\n", e.Character, "", e.Code)
 	}
 }
 
